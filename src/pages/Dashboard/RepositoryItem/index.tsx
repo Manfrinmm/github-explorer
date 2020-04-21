@@ -13,10 +13,6 @@ interface RepositoryProps {
       login: string;
       avatar_url: string;
     };
-
-    stargazers_count: number;
-    forks_count: number;
-    open_issues_count: number;
   };
 }
 
@@ -32,8 +28,6 @@ const RepositoryItem: React.FC<RepositoryProps> = ({
       onMouseEnter={() => setMouseEnter(true)}
       onMouseLeave={() => setMouseEnter(false)}
     >
-      {/* {mouseEnter && (
-      )} */}
       <button
         type="button"
         onClick={() => removeRepository(repository.full_name)}
